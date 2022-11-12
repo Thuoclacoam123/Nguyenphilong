@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    background-color: #fdeaea;
+}
+all{
+    margin: 0px auto;
+}
+.container{
+    width: 1000px;
+    margin: 0px auto;
+    border-bottom: 1px solid black;
+
+}
+.between{
+    width: 1000px;
+    text-align: left;
+    margin: 0px auto;
+}
+.introduce1{
+    border-bottom: 1px solid black;
+}
+.introduce2{
+    border-bottom: 1px solid black;
+}
+.introduce3{
+    border-bottom: 1px solid black;
+}
+h2{
+    text-decoration: underline;
+    color: #fc5a79;
+}
+.final{
+    width: 1000px;
+    margin: 0px auto;
+}
+

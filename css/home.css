@@ -1,0 +1,19 @@
+h1{
+    color: rgb(117,89,42);
+}
+
+p{
+    color: #008b8b;
+    font-size: 26px;
+    font-family: "Times New Roman";
+    font-weight: 400;
+    text-align: justify;
+    text-decoration: none;
+    text-transform: none;
+    font-style: italic;
+    line-height: 1,5;
+    background-color: #faebd7;
+    width: 600px;
+    float: left;
+    margin 15px;
+}
