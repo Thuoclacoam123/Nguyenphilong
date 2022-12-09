@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo js2</title>
+</head>
+<body>
+     <h1 id="x-name">Tên Người Cần Dùng:</h1>
+     <ul id="thucdon">
+
+     </ul>
+     <script type="text/javascript">
+
+         // var menu = [ // gọi menu các món
+         //     "phở ",
+         //     "bánh Mỳ",
+         //     "cơm ",
+         //     "trứng"
+         // ]
+         // var td = document.getElementById("thucdon");
+         // for (var i=0;i=menu.length;i++){
+         //     var pt =`<li>${menu [i]}</li>` ;
+         //     td.innerHTML = pt;
+         // }
+         // ketthuc gọi menu
+
+
+
+
+         var obj1 = { // obj1 là tên của biến
+             name:"Nguyễn Phi Long",// tên ở trong biến
+             age: 18,               // tuổi ở trong biến
+             address: " Hà Nội",    // quê quán trong biến
+             gender:"Nữ"         // giới tính trong biến
+         }
+         console.log(obj1.name);
+         var xh1 = document.getElementById("x-name");
+         setTimeout(function (){//sau 3s hiện ra tên ng cần dùng
+             // xh1.innerText = "Đinh doanh viet" // tên ng cần cùng , liên kết ở trên h1 html
+             // xh1.innerHTML = "<i> Đinh Doang Việt</i>";// sau 3s chuyển thành đinh doanh việt chữ nghiêng  thẻ " xh1.innerHTML" gọi hàm html
+             // xh1.innerHTML = obj1.name;
+             //xh1.style.color =  "red";// sau 3s đỏ chữ của html
+             //xh1.style.backgroundColor = "#166456"//sau 3s đổi mầu giòng đấy
+         },3000)
+     </script>
+
+</body>
+</html>

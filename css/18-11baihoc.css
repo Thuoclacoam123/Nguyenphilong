@@ -1,0 +1,9 @@
+input[name=fullname]{
+    background-color: #c1c1f8;
+}
+input[type=gmail]{
+    background-color: #000000;
+}
+input[type=password][name=pwd]{
+    background-color: #777775;
+}

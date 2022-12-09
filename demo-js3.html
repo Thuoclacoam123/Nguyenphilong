@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-js3</title>
+</head>
+<body>
+<!-- sự kiện nhấn nút -->
+      <button onclick="userClick()"
+              onmouseenter="userMouseIn()"
+              onmousemove="userMousaOut()">
+              Click me</button>
+      <input onkeydown="keyDown()"
+             onkeyup="keyUp ()"
+             id="ips" placeholder="Search..." type="text" name="search" />
+      <select id="sl" name="city" onchange="change()">
+          <option value="hn">HN</option>
+          <option value="dn">ĐN</option>
+          <option value="tphcm">TPHCM</option>
+      </select>
+      <span id="city">HÀ Nội</span>
+
+
+      <script type="text/javascript"> <!-- 3 sự kiện thông thường -->
+       var ips = document.getElementById("ips");
+    // nhấn giá trị hiện sang bên cạnh
+       var sl = document.getElementById("sl");
+       var ct = document.getElementById("city");
+          function keyDown(){
+              console.log("Key down..."+ips.value);
+          }
+          function  keyUp(){
+              // console.log("ky Up.."+ips.value);
+              ct.innerText = ips.value ; // thuốc tinh sgoij hàm sang hiển thị tìm kiếm ips dùng để gọi id chỉ định ở html
+          }
+          function change(){
+             // console.log("change..." + sl.value);
+              ct.innerText = sl.value;// thuốc tinh sgoij hàm sang hiển thị tìm kiếm
+          }
+          // kết thúc sư kiện hiện
+          function userClick(){
+              console.log("Nhấn Vào Link bên dưới để tải game !");
+          }
+          function userMouseIn(){
+              console.log("Mouse in...");
+
+          }
+          function userMousaOut(){
+              console.log("Mouse out..");
+
+          }
+      </script>
+<!-- sự kiện kết thúc -->
+</body>
+</html>

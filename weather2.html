@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section class="section main">
+  <div class="container">
+    <input type="text"name="city" placeholder="Nhập Tên " id="input-city" value="hanoi">
+    <button type="button" onclick="currentWeather()">TÌm kiếm</button>
+    <h1 id="cityname">Tên Thành Phố</h1>
+    <h2>Nhiệt dộ <samp id="nd"></samp><sup>o</sup>C</h2>
+    <h3>Độ ẩm ...<samp id="dm"></samp>%</h3>
+    <h3>Áp Xuất ...</h3>
+    <p id="ds">Trời Hôm Nay Nhiều Mây</p>
+    <p><img src="#" id="icon"></p>
+
+  </div>
+</section>
+<script type="text/javascript">
+  function currentWeather() {
+    // step 1: get data from web apt
+    var xhttp = new XMLHttpRequest();
+    xhttp.onload = function (){
+      // step 2: trensfer to js object
+      var reuslt = this.responseText;
+      var data = JSON.parse(reuslt);
+      // console.log(data);
+      // step 3: using data
+
+      // Thanh phố
+      var city = data.name;
+      console.log(city);
+      var ctn =document.getElementById("cityname");
+      ctn.innerText=city;
+
+      //Nhiệt dộ
+      var temp = data.main.temp;
+      var nd = document.getElementById("nd");
+      nd.innerText=temp;
+
+      // dộ ẩm
+      var doam = data.main.humidity;
+      var dm = document.getElementById("dm");
+      dm.innerText=doam;
+
+      // ap xuat
+
+
+
+
+      var weather = data.weather;
+      var str ="";
+      var ic = "";
+      for(var i=0;i<weather.length;i++){
+        str += weather[i].description;
+        ic = weather[i].icon;
+      }
+      document.getElementById("ds").innerText = str;
+
+      var src = `https://openweathermap.org/img/wn/${ic}@2x.png`;
+      document.getElementById("icon").src = src;
+    }
+    var sl_city = document.getElementById("input-city");
+    var ct = sl_city.value;
+    xhttp.open("GET",`https://api.openweathermap.org/data/2.5/weather?q=${ct},vietnam&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`);
+    xhttp.send();
+  }
+  currentWeather();
+</script>
+</body>
+</html>
